@@ -4,8 +4,7 @@
   "description": "This is the API that parses Instagram reels url and gives you the direct download link",
   "main": "src/index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.mjs"
+  "start": "node src/index.mjs"
   },
   "author": "",
   "license": "ISC",
