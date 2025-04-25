@@ -1,8 +1,7 @@
 FROM node:18-slim
 
 # Variáveis para instalar dependências
-ENV PUPPETEER_SKIP_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+ENV PUPPETEER_SKIP_DOWNLOAD=true 
 
 # Instala bibliotecas necessárias
 RUN apt update && \
@@ -15,7 +14,9 @@ RUN apt update && \
 WORKDIR /app
 
 # Copia os arquivos
-COPY package*.json ./
+COPY package-lock.json .
+COPY package.json .
+
 RUN npm install
 
 # Copia restante do projeto
